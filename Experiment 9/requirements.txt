@@ -1,0 +1,7 @@
+openai
+google-generativeai
+anthropic
+tabulate
+rich
+matplotlib
+python-dotenv

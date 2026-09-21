@@ -1,0 +1,752 @@
+[
+  {
+    "model": "gpt-4o",
+    "strategy": "zero_shot",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "response": "The ball costs $0.10.",
+    "latency_ms": 413,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "zero_shot",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
+    "response": "Yes.",
+    "latency_ms": 256,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "zero_shot",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?",
+    "response": "6 cubes have exactly one red face.",
+    "latency_ms": 312,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "zero_shot",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?",
+    "response": "Fill the 5-gallon jug, pour into the 3-gallon jug, leaving 2 gallons. Empty the 3-gallon jug, pour the 2 gallons in, fill the 5-gallon jug and pour into the 3-gallon jug again. Now 4 gallons remain in the 5-gallon jug.",
+    "latency_ms": 285,
+    "tokens": 38,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "zero_shot",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.",
+    "response": "The probability is 1/2.",
+    "latency_ms": 423,
+    "tokens": 16,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "few_shot",
+    "problem_id": "p1_math_simple",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\nAnswer:",
+    "response": "Answer: The ball costs $0.05.\nWait, let me double check. If ball is 0.05, bat is 1.05. Total is 1.10. Yes, $0.05.",
+    "latency_ms": 644,
+    "tokens": 35,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "few_shot",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\nAnswer:",
+    "response": "Yes, all bloops are definitely lazzies because the chain of inclusion holds.",
+    "latency_ms": 816,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "few_shot",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\nAnswer:",
+    "response": "There are 6 smaller cubes with exactly one red face -- one at the center of each face of the original cube.",
+    "latency_ms": 615,
+    "tokens": 19,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "few_shot",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\nAnswer:",
+    "response": "Step 1: Fill 5-gallon jug (5,0).\nStep 2: Pour into 3-gallon jug (2,3).\nStep 3: Empty 3-gallon jug (2,0).\nStep 4: Pour 2 gallons into 3-gallon jug (0,2).\nStep 5: Fill 5-gallon jug (5,2).\nStep 6: Pour from 5 into 3 until full (4,3).\nResult: 4 gallons in the 5-gallon jug.",
+    "latency_ms": 711,
+    "tokens": 53,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "few_shot",
+    "problem_id": "p5_probability",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\nAnswer:",
+    "response": "The probability is 1/3. The sample space with at least one girl is {GG, GB, BG}, and only GG has both girls.",
+    "latency_ms": 858,
+    "tokens": 36,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "chain_of_thought",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. Let the cost of the ball be 'x'.\n2. The bat costs $1.00 more than the ball, so the bat costs 'x + 1.00'.\n3. Together they cost $1.10: x + (x + 1.00) = 1.10\n4. Combine terms: 2x + 1.00 = 1.10\n5. Subtract 1.00: 2x = 0.10\n6. Divide by 2: x = 0.05\nTherefore, the ball costs $0.05.",
+    "latency_ms": 1527,
+    "tokens": 80,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "chain_of_thought",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. All bloops are razzies (Bloop is a subset of Razzy).\n2. All razzies are lazzies (Razzy is a subset of Lazzy).\n3. By transitivity: Bloop -> Razzy -> Lazzy.\n4. Therefore all bloops are definitely lazzies.\nAnswer: Yes.",
+    "latency_ms": 1703,
+    "tokens": 59,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "chain_of_thought",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. A 3x3x3 cube cut into 27 unit cubes.\n2. Corner cubes (8 total): 3 painted faces each.\n3. Edge cubes (12 total): 2 painted faces each.\n4. Face-center cubes (6 total): 1 painted face each. <-- This is what we want.\n5. Core cube (1 total): 0 painted faces.\nCheck: 8 + 12 + 6 + 1 = 27 [OK]\nAnswer: 6 cubes have exactly one red face.",
+    "latency_ms": 2218,
+    "tokens": 86,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "chain_of_thought",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\n\nLet's think step by step.",
+    "response": "Let's think step by step. I'll track state as (5-gal, 3-gal).\nStart: (0, 0)\nStep 1 -- Fill the 5-gallon jug: (5, 0)\nStep 2 -- Pour 5->3 until 3 is full: (2, 3)\nStep 3 -- Empty the 3-gallon jug: (2, 0)\nStep 4 -- Pour the 2 gallons into the 3-gallon jug: (0, 2)\nStep 5 -- Fill the 5-gallon jug again: (5, 2)\nStep 6 -- Pour 5->3 (only 1 gallon fits): (4, 3)\nWe now have exactly 4 gallons in the 5-gallon jug. [OK]",
+    "latency_ms": 1929,
+    "tokens": 90,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "chain_of_thought",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. All equally likely outcomes for two children: {BB, BG, GB, GG}.\n2. Condition: at least one is a girl -> eliminate BB -> {BG, GB, GG}.\n3. Favorable outcome: both girls -> {GG}.\n4. P(both girls | at least one girl) = 1/3.\nAnswer: 1/3.",
+    "latency_ms": 1959,
+    "tokens": 64,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "role_based",
+    "problem_id": "p1_math_simple",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "response": "As an expert mathematician, I frequently see students fall for this intuitive trap! The intuitive answer is 10 cents, but let's break it down algebraically. If B = ball cost, then Bat = B + 1.00. B + Bat = 1.10. Substituting: 2B + 1.00 = 1.10, so 2B = 0.10, so B = 0.05. The ball costs exactly 5 cents.",
+    "latency_ms": 1534,
+    "tokens": 56,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "role_based",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
+    "response": "This is a classic syllogism -- a staple of formal logic. The transitive property of subset inclusion gives us: Bloop <= Razzy <= Lazzy. Since subset inclusion is transitive, Bloop <= Lazzy. So yes, all bloops are definitely lazzies. This follows directly from Barbara syllogism (AAA-1) in traditional logic.",
+    "latency_ms": 1413,
+    "tokens": 57,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "role_based",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?",
+    "response": "Excellent spatial reasoning problem! Let me categorize all 27 sub-cubes by position. Corners sit at 3-face intersections -> 3 red faces (8 cubes). Edges sit at 2-face intersections -> 2 red faces (12 cubes). Face centers touch exactly 1 outer face -> 1 red face (6 cubes). The single interior cube has 0 red faces. Verification: 8+12+6+1=27. Answer: 6.",
+    "latency_ms": 1598,
+    "tokens": 62,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "role_based",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?",
+    "response": "This is the classic Die Hard 3 water jug problem! It's a well-known example in state-space search and number theory. The key insight is that any volume measurable with jugs of capacity a and b must be a multiple of gcd(a,b). Since gcd(5,3)=1, we can measure any integer volume.\n\nOptimal solution in 6 steps:\n(0,0)->(5,0)->(2,3)->(2,0)->(0,2)->(5,2)->(4,3)\nResult: 4 gallons in the 5-gallon jug.",
+    "latency_ms": 1409,
+    "tokens": 63,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "role_based",
+    "problem_id": "p5_probability",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.",
+    "response": "This is the classic 'Boy or Girl' paradox, a wonderful example of how conditional probability can be counter-intuitive. Many students guess 1/2, but the correct answer requires careful enumeration.\n\nSample space: {BB, BG, GB, GG} -- each with P = 1/4.\nEvent A (at least one girl): {BG, GB, GG}, P(A) = 3/4.\nEvent B (both girls): {GG}, P(B) = 1/4.\nP(B|A) = P(B&A)/P(A) = (1/4)/(3/4) = 1/3.\n\nThe answer is 1/3, NOT 1/2.",
+    "latency_ms": 1594,
+    "tokens": 72,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "structured_output",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Let x = ball. Bat = x + 1. x + (x+1) = 1.1, 2x = 0.1, x = 0.05.\",\n  \"answer\": \"$0.05\",\n  \"confidence\": 100\n}",
+    "latency_ms": 897,
+    "tokens": 34,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "structured_output",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Bloop subset Razzy subset Lazzy. By transitivity, Bloop subset Lazzy.\",\n  \"answer\": \"Yes, all bloops are definitely lazzies.\",\n  \"confidence\": 99\n}",
+    "latency_ms": 899,
+    "tokens": 28,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "structured_output",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Corners=8(3 faces), Edges=12(2 faces), Face-centers=6(1 face), Core=1(0 faces). Total=27.\",\n  \"answer\": \"6\",\n  \"confidence\": 100\n}",
+    "latency_ms": 1283,
+    "tokens": 22,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "structured_output",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"States: (0,0)->(5,0)->(2,3)->(2,0)->(0,2)->(5,2)->(4,3). 6 steps using fill/pour/empty.\",\n  \"answer\": \"Fill 5, pour to 3 (leaves 2), empty 3, move 2 to 3, fill 5, pour 1 into 3 -> 4 gallons in 5-gal jug.\",\n  \"confidence\": 100\n}",
+    "latency_ms": 1159,
+    "tokens": 40,
+    "error": null
+  },
+  {
+    "model": "gpt-4o",
+    "strategy": "structured_output",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Sample space: {BB,BG,GB,GG}. Given >=1 girl: {BG,GB,GG}. P(GG|>=1 girl) = 1/3.\",\n  \"answer\": \"1/3\",\n  \"confidence\": 98\n}",
+    "latency_ms": 1263,
+    "tokens": 14,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "zero_shot",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "response": "The ball costs $0.10.",
+    "latency_ms": 370,
+    "tokens": 13,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "zero_shot",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
+    "response": "Yes.",
+    "latency_ms": 328,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "zero_shot",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?",
+    "response": "6 cubes have exactly one red face.",
+    "latency_ms": 294,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "zero_shot",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?",
+    "response": "Fill the 5-gallon jug, pour into the 3-gallon jug, leaving 2 gallons. Empty the 3-gallon jug, pour the 2 gallons in, fill the 5-gallon jug and pour into the 3-gallon jug again. Now 4 gallons remain in the 5-gallon jug.",
+    "latency_ms": 332,
+    "tokens": 44,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "zero_shot",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.",
+    "response": "The probability is 1/2.",
+    "latency_ms": 348,
+    "tokens": 18,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "few_shot",
+    "problem_id": "p1_math_simple",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\nAnswer:",
+    "response": "Answer: The ball costs $0.05.\nWait, let me double check. If ball is 0.05, bat is 1.05. Total is 1.10. Yes, $0.05.",
+    "latency_ms": 667,
+    "tokens": 35,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "few_shot",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\nAnswer:",
+    "response": "Yes, all bloops are definitely lazzies because the chain of inclusion holds.",
+    "latency_ms": 593,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "few_shot",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\nAnswer:",
+    "response": "There are 6 smaller cubes with exactly one red face -- one at the center of each face of the original cube.",
+    "latency_ms": 529,
+    "tokens": 24,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "few_shot",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\nAnswer:",
+    "response": "Step 1: Fill 5-gallon jug (5,0).\nStep 2: Pour into 3-gallon jug (2,3).\nStep 3: Empty 3-gallon jug (2,0).\nStep 4: Pour 2 gallons into 3-gallon jug (0,2).\nStep 5: Fill 5-gallon jug (5,2).\nStep 6: Pour from 5 into 3 until full (4,3).\nResult: 4 gallons in the 5-gallon jug.",
+    "latency_ms": 845,
+    "tokens": 55,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "few_shot",
+    "problem_id": "p5_probability",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\nAnswer:",
+    "response": "The probability is 1/3. The sample space with at least one girl is {GG, GB, BG}, and only GG has both girls.",
+    "latency_ms": 544,
+    "tokens": 24,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "chain_of_thought",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. Let the cost of the ball be 'x'.\n2. The bat costs $1.00 more than the ball, so the bat costs 'x + 1.00'.\n3. Together they cost $1.10: x + (x + 1.00) = 1.10\n4. Combine terms: 2x + 1.00 = 1.10\n5. Subtract 1.00: 2x = 0.10\n6. Divide by 2: x = 0.05\nTherefore, the ball costs $0.05.",
+    "latency_ms": 1362,
+    "tokens": 75,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "chain_of_thought",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. All bloops are razzies (Bloop is a subset of Razzy).\n2. All razzies are lazzies (Razzy is a subset of Lazzy).\n3. By transitivity: Bloop -> Razzy -> Lazzy.\n4. Therefore all bloops are definitely lazzies.\nAnswer: Yes.",
+    "latency_ms": 1516,
+    "tokens": 53,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "chain_of_thought",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. A 3x3x3 cube cut into 27 unit cubes.\n2. Corner cubes (8 total): 3 painted faces each.\n3. Edge cubes (12 total): 2 painted faces each.\n4. Face-center cubes (6 total): 1 painted face each. <-- This is what we want.\n5. Core cube (1 total): 0 painted faces.\nCheck: 8 + 12 + 6 + 1 = 27 [OK]\nAnswer: 6 cubes have exactly one red face.",
+    "latency_ms": 1827,
+    "tokens": 80,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "chain_of_thought",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\n\nLet's think step by step.",
+    "response": "Let's think step by step. I'll track state as (5-gal, 3-gal).\nStart: (0, 0)\nStep 1 -- Fill the 5-gallon jug: (5, 0)\nStep 2 -- Pour 5->3 until 3 is full: (2, 3)\nStep 3 -- Empty the 3-gallon jug: (2, 0)\nStep 4 -- Pour the 2 gallons into the 3-gallon jug: (0, 2)\nStep 5 -- Fill the 5-gallon jug again: (5, 2)\nStep 6 -- Pour 5->3 (only 1 gallon fits): (4, 3)\nWe now have exactly 4 gallons in the 5-gallon jug. [OK]",
+    "latency_ms": 1416,
+    "tokens": 94,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "chain_of_thought",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. All equally likely outcomes for two children: {BB, BG, GB, GG}.\n2. Condition: at least one is a girl -> eliminate BB -> {BG, GB, GG}.\n3. Favorable outcome: both girls -> {GG}.\n4. P(both girls | at least one girl) = 1/3.\nAnswer: 1/3.",
+    "latency_ms": 1583,
+    "tokens": 52,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "role_based",
+    "problem_id": "p1_math_simple",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "response": "As an expert mathematician, I frequently see students fall for this intuitive trap! The intuitive answer is 10 cents, but let's break it down algebraically. If B = ball cost, then Bat = B + 1.00. B + Bat = 1.10. Substituting: 2B + 1.00 = 1.10, so 2B = 0.10, so B = 0.05. The ball costs exactly 5 cents.",
+    "latency_ms": 1645,
+    "tokens": 64,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "role_based",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
+    "response": "This is a classic syllogism -- a staple of formal logic. The transitive property of subset inclusion gives us: Bloop <= Razzy <= Lazzy. Since subset inclusion is transitive, Bloop <= Lazzy. So yes, all bloops are definitely lazzies. This follows directly from Barbara syllogism (AAA-1) in traditional logic.",
+    "latency_ms": 1656,
+    "tokens": 64,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "role_based",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?",
+    "response": "Excellent spatial reasoning problem! Let me categorize all 27 sub-cubes by position. Corners sit at 3-face intersections -> 3 red faces (8 cubes). Edges sit at 2-face intersections -> 2 red faces (12 cubes). Face centers touch exactly 1 outer face -> 1 red face (6 cubes). The single interior cube has 0 red faces. Verification: 8+12+6+1=27. Answer: 6.",
+    "latency_ms": 1124,
+    "tokens": 73,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "role_based",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?",
+    "response": "This is the classic Die Hard 3 water jug problem! It's a well-known example in state-space search and number theory. The key insight is that any volume measurable with jugs of capacity a and b must be a multiple of gcd(a,b). Since gcd(5,3)=1, we can measure any integer volume.\n\nOptimal solution in 6 steps:\n(0,0)->(5,0)->(2,3)->(2,0)->(0,2)->(5,2)->(4,3)\nResult: 4 gallons in the 5-gallon jug.",
+    "latency_ms": 1615,
+    "tokens": 62,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "role_based",
+    "problem_id": "p5_probability",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.",
+    "response": "This is the classic 'Boy or Girl' paradox, a wonderful example of how conditional probability can be counter-intuitive. Many students guess 1/2, but the correct answer requires careful enumeration.\n\nSample space: {BB, BG, GB, GG} -- each with P = 1/4.\nEvent A (at least one girl): {BG, GB, GG}, P(A) = 3/4.\nEvent B (both girls): {GG}, P(B) = 1/4.\nP(B|A) = P(B&A)/P(A) = (1/4)/(3/4) = 1/3.\n\nThe answer is 1/3, NOT 1/2.",
+    "latency_ms": 1526,
+    "tokens": 76,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "structured_output",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Let x = ball. Bat = x + 1. x + (x+1) = 1.1, 2x = 0.1, x = 0.05.\",\n  \"answer\": \"$0.05\",\n  \"confidence\": 100\n}",
+    "latency_ms": 793,
+    "tokens": 36,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "structured_output",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Bloop subset Razzy subset Lazzy. By transitivity, Bloop subset Lazzy.\",\n  \"answer\": \"Yes, all bloops are definitely lazzies.\",\n  \"confidence\": 99\n}",
+    "latency_ms": 887,
+    "tokens": 25,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "structured_output",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Corners=8(3 faces), Edges=12(2 faces), Face-centers=6(1 face), Core=1(0 faces). Total=27.\",\n  \"answer\": \"6\",\n  \"confidence\": 100\n}",
+    "latency_ms": 1124,
+    "tokens": 31,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "structured_output",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"States: (0,0)->(5,0)->(2,3)->(2,0)->(0,2)->(5,2)->(4,3). 6 steps using fill/pour/empty.\",\n  \"answer\": \"Fill 5, pour to 3 (leaves 2), empty 3, move 2 to 3, fill 5, pour 1 into 3 -> 4 gallons in 5-gal jug.\",\n  \"confidence\": 100\n}",
+    "latency_ms": 1021,
+    "tokens": 49,
+    "error": null
+  },
+  {
+    "model": "gemini-1.5-pro",
+    "strategy": "structured_output",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Sample space: {BB,BG,GB,GG}. Given >=1 girl: {BG,GB,GG}. P(GG|>=1 girl) = 1/3.\",\n  \"answer\": \"1/3\",\n  \"confidence\": 98\n}",
+    "latency_ms": 817,
+    "tokens": 23,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "zero_shot",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "response": "The ball costs $0.10.",
+    "latency_ms": 490,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "zero_shot",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
+    "response": "Yes.",
+    "latency_ms": 338,
+    "tokens": 10,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "zero_shot",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?",
+    "response": "6 cubes have exactly one red face.",
+    "latency_ms": 363,
+    "tokens": 14,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "zero_shot",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?",
+    "response": "Fill the 5-gallon jug, pour into the 3-gallon jug, leaving 2 gallons. Empty the 3-gallon jug, pour the 2 gallons in, fill the 5-gallon jug and pour into the 3-gallon jug again. Now 4 gallons remain in the 5-gallon jug.",
+    "latency_ms": 349,
+    "tokens": 37,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "zero_shot",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.",
+    "response": "The probability is 1/2.",
+    "latency_ms": 334,
+    "tokens": 17,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "few_shot",
+    "problem_id": "p1_math_simple",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\nAnswer:",
+    "response": "Answer: The ball costs $0.05.\nWait, let me double check. If ball is 0.05, bat is 1.05. Total is 1.10. Yes, $0.05.",
+    "latency_ms": 1063,
+    "tokens": 27,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "few_shot",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\nAnswer:",
+    "response": "Yes, all bloops are definitely lazzies because the chain of inclusion holds.",
+    "latency_ms": 778,
+    "tokens": 27,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "few_shot",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\nAnswer:",
+    "response": "There are 6 smaller cubes with exactly one red face -- one at the center of each face of the original cube.",
+    "latency_ms": 940,
+    "tokens": 29,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "few_shot",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\nAnswer:",
+    "response": "Step 1: Fill 5-gallon jug (5,0).\nStep 2: Pour into 3-gallon jug (2,3).\nStep 3: Empty 3-gallon jug (2,0).\nStep 4: Pour 2 gallons into 3-gallon jug (0,2).\nStep 5: Fill 5-gallon jug (5,2).\nStep 6: Pour from 5 into 3 until full (4,3).\nResult: 4 gallons in the 5-gallon jug.",
+    "latency_ms": 1021,
+    "tokens": 60,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "few_shot",
+    "problem_id": "p5_probability",
+    "prompt": "Here are some examples of problem solving:\n\nQuestion: What is 2 + 2?\nAnswer: 4\n\nQuestion: If a train travels 60 mph for 2 hours, how far does it go?\nAnswer: 120 miles\n\nNow, solve the following problem:\nQuestion: In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\nAnswer:",
+    "response": "The probability is 1/3. The sample space with at least one girl is {GG, GB, BG}, and only GG has both girls.",
+    "latency_ms": 740,
+    "tokens": 25,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "chain_of_thought",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. Let the cost of the ball be 'x'.\n2. The bat costs $1.00 more than the ball, so the bat costs 'x + 1.00'.\n3. Together they cost $1.10: x + (x + 1.00) = 1.10\n4. Combine terms: 2x + 1.00 = 1.10\n5. Subtract 1.00: 2x = 0.10\n6. Divide by 2: x = 0.05\nTherefore, the ball costs $0.05.",
+    "latency_ms": 1806,
+    "tokens": 70,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "chain_of_thought",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. All bloops are razzies (Bloop is a subset of Razzy).\n2. All razzies are lazzies (Razzy is a subset of Lazzy).\n3. By transitivity: Bloop -> Razzy -> Lazzy.\n4. Therefore all bloops are definitely lazzies.\nAnswer: Yes.",
+    "latency_ms": 2488,
+    "tokens": 56,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "chain_of_thought",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. A 3x3x3 cube cut into 27 unit cubes.\n2. Corner cubes (8 total): 3 painted faces each.\n3. Edge cubes (12 total): 2 painted faces each.\n4. Face-center cubes (6 total): 1 painted face each. <-- This is what we want.\n5. Core cube (1 total): 0 painted faces.\nCheck: 8 + 12 + 6 + 1 = 27 [OK]\nAnswer: 6 cubes have exactly one red face.",
+    "latency_ms": 2256,
+    "tokens": 77,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "chain_of_thought",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\n\nLet's think step by step.",
+    "response": "Let's think step by step. I'll track state as (5-gal, 3-gal).\nStart: (0, 0)\nStep 1 -- Fill the 5-gallon jug: (5, 0)\nStep 2 -- Pour 5->3 until 3 is full: (2, 3)\nStep 3 -- Empty the 3-gallon jug: (2, 0)\nStep 4 -- Pour the 2 gallons into the 3-gallon jug: (0, 2)\nStep 5 -- Fill the 5-gallon jug again: (5, 2)\nStep 6 -- Pour 5->3 (only 1 gallon fits): (4, 3)\nWe now have exactly 4 gallons in the 5-gallon jug. [OK]",
+    "latency_ms": 2490,
+    "tokens": 101,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "chain_of_thought",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\n\nLet's think step by step.",
+    "response": "Let's think step by step.\n1. All equally likely outcomes for two children: {BB, BG, GB, GG}.\n2. Condition: at least one is a girl -> eliminate BB -> {BG, GB, GG}.\n3. Favorable outcome: both girls -> {GG}.\n4. P(both girls | at least one girl) = 1/3.\nAnswer: 1/3.",
+    "latency_ms": 2131,
+    "tokens": 64,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "role_based",
+    "problem_id": "p1_math_simple",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "response": "As an expert mathematician, I frequently see students fall for this intuitive trap! The intuitive answer is 10 cents, but let's break it down algebraically. If B = ball cost, then Bat = B + 1.00. B + Bat = 1.10. Substituting: 2B + 1.00 = 1.10, so 2B = 0.10, so B = 0.05. The ball costs exactly 5 cents.",
+    "latency_ms": 1823,
+    "tokens": 67,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "role_based",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
+    "response": "This is a classic syllogism -- a staple of formal logic. The transitive property of subset inclusion gives us: Bloop <= Razzy <= Lazzy. Since subset inclusion is transitive, Bloop <= Lazzy. So yes, all bloops are definitely lazzies. This follows directly from Barbara syllogism (AAA-1) in traditional logic.",
+    "latency_ms": 1621,
+    "tokens": 48,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "role_based",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?",
+    "response": "Excellent spatial reasoning problem! Let me categorize all 27 sub-cubes by position. Corners sit at 3-face intersections -> 3 red faces (8 cubes). Edges sit at 2-face intersections -> 2 red faces (12 cubes). Face centers touch exactly 1 outer face -> 1 red face (6 cubes). The single interior cube has 0 red faces. Verification: 8+12+6+1=27. Answer: 6.",
+    "latency_ms": 1948,
+    "tokens": 69,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "role_based",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?",
+    "response": "This is the classic Die Hard 3 water jug problem! It's a well-known example in state-space search and number theory. The key insight is that any volume measurable with jugs of capacity a and b must be a multiple of gcd(a,b). Since gcd(5,3)=1, we can measure any integer volume.\n\nOptimal solution in 6 steps:\n(0,0)->(5,0)->(2,3)->(2,0)->(0,2)->(5,2)->(4,3)\nResult: 4 gallons in the 5-gallon jug.",
+    "latency_ms": 1477,
+    "tokens": 58,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "role_based",
+    "problem_id": "p5_probability",
+    "prompt": "You are an expert mathematician and logician with decades of experience teaching at a top university. You are known for your precise, clear, and insightful explanations.\n\nPlease solve the following problem: In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.",
+    "response": "This is the classic 'Boy or Girl' paradox, a wonderful example of how conditional probability can be counter-intuitive. Many students guess 1/2, but the correct answer requires careful enumeration.\n\nSample space: {BB, BG, GB, GG} -- each with P = 1/4.\nEvent A (at least one girl): {BG, GB, GG}, P(A) = 3/4.\nEvent B (both girls): {GG}, P(B) = 1/4.\nP(B|A) = P(B&A)/P(A) = (1/4)/(3/4) = 1/3.\n\nThe answer is 1/3, NOT 1/2.",
+    "latency_ms": 1498,
+    "tokens": 73,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "structured_output",
+    "problem_id": "p1_math_simple",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Let x = ball. Bat = x + 1. x + (x+1) = 1.1, 2x = 0.1, x = 0.05.\",\n  \"answer\": \"$0.05\",\n  \"confidence\": 100\n}",
+    "latency_ms": 1288,
+    "tokens": 27,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "structured_output",
+    "problem_id": "p2_logic_deduction",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Bloop subset Razzy subset Lazzy. By transitivity, Bloop subset Lazzy.\",\n  \"answer\": \"Yes, all bloops are definitely lazzies.\",\n  \"confidence\": 99\n}",
+    "latency_ms": 1380,
+    "tokens": 30,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "structured_output",
+    "problem_id": "p3_spatial_reasoning",
+    "prompt": "I have a 3x3x3 wooden cube painted red on the outside. If I cut it into 27 smaller 1x1x1 cubes, how many smaller cubes have exactly one red face?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Corners=8(3 faces), Edges=12(2 faces), Face-centers=6(1 face), Core=1(0 faces). Total=27.\",\n  \"answer\": \"6\",\n  \"confidence\": 100\n}",
+    "latency_ms": 1270,
+    "tokens": 13,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "structured_output",
+    "problem_id": "p4_algorithmic_thinking",
+    "prompt": "You have two jugs, one holds 5 gallons and the other holds 3 gallons. You have an unlimited water supply. How can you measure exactly 4 gallons?\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"States: (0,0)->(5,0)->(2,3)->(2,0)->(0,2)->(5,2)->(4,3). 6 steps using fill/pour/empty.\",\n  \"answer\": \"Fill 5, pour to 3 (leaves 2), empty 3, move 2 to 3, fill 5, pour 1 into 3 -> 4 gallons in 5-gal jug.\",\n  \"confidence\": 100\n}",
+    "latency_ms": 1151,
+    "tokens": 44,
+    "error": null
+  },
+  {
+    "model": "claude-3-5-sonnet-20240620",
+    "strategy": "structured_output",
+    "problem_id": "p5_probability",
+    "prompt": "In a family with two children, what is the probability that both are girls given that at least one is a girl? Assume boy/girl births are equally likely and independent.\n\nRespond ONLY in valid JSON format with the following fields:\n- \"reasoning\": A string containing your step-by-step logic.\n- \"answer\": A concise string containing the final answer.\n- \"confidence\": An integer from 1 to 100 representing your confidence.\nEnsure the response can be parsed directly by a JSON parser without any markdown wrapping.",
+    "response": "{\n  \"reasoning\": \"Sample space: {BB,BG,GB,GG}. Given >=1 girl: {BG,GB,GG}. P(GG|>=1 girl) = 1/3.\",\n  \"answer\": \"1/3\",\n  \"confidence\": 98\n}",
+    "latency_ms": 1270,
+    "tokens": 27,
+    "error": null
+  }
+]
