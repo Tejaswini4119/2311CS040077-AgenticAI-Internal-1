@@ -1,0 +1,7 @@
+{
+  "base_on_general_test": 1.0,
+  "base_on_domain_test_before_finetune": 0.34782608695652173,
+  "finetuned_on_domain_test_after_finetune": 1.0,
+  "finetuned_on_general_test_regression_check": 1.0,
+  "domain_accuracy_delta": 0.6521739130434783
+}
